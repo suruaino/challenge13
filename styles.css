@@ -1,0 +1,314 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    /*### Primary ###*/
+    /* --Orange: hsl(26, 82%, 52%); */
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    
+    /*### Neutral ###*/
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: rgba(0, 0, 0, 0.75);
+
+    /*Button hover*/
+    --btnHover: hsla(26, 100%, 66%, 0.849);
+}
+body{
+    Font-size: 16px;
+    font-family: Kumbh Sans;
+    height: 100%;
+    position: relative;
+}
+body .overlay{
+    background-color: rgba(0, 0, 0, 0.872);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+}
+header nav{
+    background: var(--White);
+    top: 0;
+    left: 0;
+
+}
+header nav ul li a{
+    font-size: 12px;
+    color: var(--Grayish-blue);
+}
+header nav ul li a:hover{
+    color: var(--Black);
+}
+header input:checked ~ nav{
+    display: flex;
+    transform: translateX(0%);
+}
+header input:checked ~ .logo .menu{
+    display: none;
+}
+header input:checked ~ .logo .close{
+    display: block;
+}
+header .badge{
+    background-color: var(--Orange);
+    padding: 1px 8px;
+    color: var(--White);
+    font-size: 7px;
+    border-radius: 50%;
+}
+header #cartempty,
+header #cartfill{
+        width: 355px;
+    }
+header #cartfill button{
+    background: var(--Orange);
+    color: var(--White);
+    font-size: 13px;
+    width: 100%;
+    padding: 8px 14px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; 
+}
+header .profile .profile-pic img{
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+header .profile .profile-pic img:hover{
+    border-radius: 50%;
+    border: 2px solid var(--Orange);
+}
+@media only screen and (min-width:768px){
+    header nav ul li a::after{
+        content: "";
+        background: transparent;
+        width: 100%;
+        height: 4px;
+        display: flex;
+        transform: translateY(44px);
+       }
+   header nav ul li a:hover::after{
+        content: "";
+        background: var(--Orange);
+        width: 100%;
+        height: 4px;
+        display: flex;
+        transform: translateY(44px);
+   }
+    header nav{
+        background: none;
+        color: var(--Dark-grayish-blue);
+    }
+    /* header nav ul li{
+        height: 100%;
+        border-bottom: 2px solid var(--Orange);
+    } */
+    header .badge{
+        background-color: var(--Orange);
+        padding: 2px 12px;
+        color: var(--White);
+        font-size: 9px;
+        border-radius: 50%;
+    }
+    header #cartempty,
+    header #cartfill{
+        width: 300px;
+    }
+    header #cartfill button{
+        background: var(--Orange);
+        color: var(--White);
+        font-size: 18px;
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (min-width:948px){
+    header nav ul li a{
+        font-size: 16px;
+    }
+}
+
+main .hero{
+    z-index: 10;
+}
+
+main .hero .left .sub-img{
+    gap: 4%;
+}
+main .hero .left .sub-img .img-cover{
+    background-color: rgba(255, 255, 255, 0.742);
+    border: 2px solid var(--Orange);
+    border-radius: 10px;
+}
+main .hero .left .sub-img button{
+    width: 22%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+main .hero .left .sub-img button:hover .img-cover{
+    visibility: visible;
+}
+main .hero .left .sub-img button img{
+    border-radius: 10px;
+}
+/* main .hero .left .sub-img button input{
+    border-radius: 10px;
+    opacity: 0;
+    z-index: 11;
+}
+main .hero .left .sub-img button input:checked .img-cover{
+    border: 2px solid var(--Orange);
+} */
+main .hero .lightbox{
+    z-index: 21;
+}
+main .hero .lightbox #close-lightbox i{
+    color: var(--White);
+    transform: scale(2.5);
+}
+main .hero .lightbox #close-lightbox i:hover{
+    color: var(--Orange);
+    
+}
+main .hero .lightbox .main-img{
+    height: 430px;
+}
+main .hero .lightbox .sub-img .img-cover{
+    background-color: rgba(255, 255, 255, 0.742);
+    border: 2px solid var(--Orange);
+    border-radius: 32px;
+}
+main .hero .lightbox .sub-img img{
+    width: 100%;
+    border-radius: 32px;
+}
+
+main .hero .lightbox .sub-img button:hover .img-cover{
+    visibility: visible;
+}
+main .hero .lightbox #previous,
+main .hero .lightbox #next{
+    top: 40%;
+    z-index: 100;
+    color: black;
+}
+main .hero .lightbox #previous i,
+main .hero .lightbox #next i{
+    transform: scale(1.5);
+    color: black;
+}
+main .hero .lightbox #previous:hover i,
+main .hero .lightbox #next:hover i{
+    color: var(--Orange);
+}
+main .hero .right .top h1{
+    color: var(--Orange);
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+main .hero .right .top h2{
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+}
+main .hero .right .bottom p{
+    color: var(--Grayish-blue);
+    font-size: 12.5px;
+}
+main .hero .right .bottom .pricebx #active-price{
+    color: var(--Black);
+    font-size: 24px;
+    font-weight: bold;
+}
+main .hero .right .bottom .pricebx #percentage-off{
+    background: var(--Pale-orange);
+    color: var(--Orange);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 1px 6px;
+    border-radius: 5px;
+}
+main .hero .right .bottom .pricebx #inactive-price{
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+main .hero .right .bottom .buttonbx .left{
+    background: var(--Light-grayish-blue);
+    padding: 12px 14px;
+    border-radius: 8px;
+}
+main .hero .right .bottom .buttonbx .left p{
+    color: var(--Black);
+    font-size: 14px;
+    font-weight: bold;
+}
+main .hero .right .bottom .buttonbx .right #addBtn{
+    background: var(--Orange);
+    color: var(--White);
+    font-size: 13px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 32px 1px rgba(240, 112, 7, 0.321);
+    
+}
+main .hero .right .bottom .buttonbx .right #addBtn:hover{
+    background: var(--btnHover);
+    box-shadow: none;
+}
+
+@media only screen and (min-width:768px){
+    main .hero .right{
+        gap: 40px;
+    }
+    main .hero .right .top h1{
+        font-size: 14px;
+    }
+    main .hero .right .top h2{
+        font-size: 43px;
+        line-height: 50px;
+    }
+    main .hero .right .bottom{
+        gap: 30px;
+    }
+    main .hero .right .bottom p{
+        color: var(--Grayish-blue);
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: .6px;
+    }
+    main .hero .right .bottom .pricebx #active-price{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    main .hero .right .bottom .pricebx #percentage-off{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    main .hero .right .bottom .pricebx #inactive-price{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+}
