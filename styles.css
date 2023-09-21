@@ -19,6 +19,14 @@
     /*Button hover*/
     --btnHover: hsla(26, 100%, 66%, 0.849);
 }
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
 body{
     Font-size: 16px;
     font-family: Kumbh Sans;
@@ -145,7 +153,10 @@ header .profile .profile-pic img:hover{
 main .hero{
     z-index: 10;
 }
-
+main .hero .left #previous:hover i,
+main .hero .left #next:hover i{
+    color: var(--Orange);
+}
 main .hero .left .sub-img{
     gap: 4%;
 }
@@ -175,6 +186,8 @@ main .hero .left .sub-img button input:checked .img-cover{
 } */
 main .hero .lightbox{
     z-index: 21;
+    /* max-width: 40rem; */
+    width: clamp(35rem, 40rem, 45rem);
 }
 main .hero .lightbox #close-lightbox i{
     color: var(--White);
@@ -186,6 +199,7 @@ main .hero .lightbox #close-lightbox i:hover{
 }
 main .hero .lightbox .main-img{
     height: 430px;
+    
 }
 main .hero .lightbox .sub-img .img-cover{
     background-color: rgba(255, 255, 255, 0.742);
@@ -202,7 +216,8 @@ main .hero .lightbox .sub-img button:hover .img-cover{
 }
 main .hero .lightbox #previous,
 main .hero .lightbox #next{
-    top: 40%;
+    top: 35%;
+    transform: translateY(-35%);
     z-index: 100;
     color: black;
 }

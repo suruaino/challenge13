@@ -1,7 +1,7 @@
 const button = document.getElementById('cartBtn');
 const body = document.body;
 // let cartFill = "";
-  let cartFill = document.getElementById("cartfill");
+let cartFill = document.getElementById("cartfill");
 let cartEmpty = document.getElementById("cartempty");
 let badge = document.getElementById('badge')
 let thumbnailBtn = document.getElementsByClassName("thumbnailBtn");
@@ -30,10 +30,10 @@ function handleOutsideClick(event) {
 // eventListerner to handle when the button is clicked.
 button.addEventListener('click', openCart);
 
-// Add a click event listener to the document body to capture clicks outside the button
+// eventListener to capture clicks outside the button
 body.addEventListener('click', handleOutsideClick);
 
-// Prevent clicks inside the button from triggering the outside click event
+// eventListener to prevent clicks inside the button from triggering the outside click event
 button.addEventListener('click', function (event) {
   event.stopPropagation();
 });
