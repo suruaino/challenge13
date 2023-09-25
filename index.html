@@ -86,31 +86,34 @@
           <i class="fa fa-angle-left" aria-hidden="true"></i>
         </button>
 
-        <button id="next"
+        <button onclick="scrollNext()" id="next"
           class="w-8 h-8 bg-white p-2 rounded-full absolute right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center md:hidden">
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </button>
 
-        <div class="main-img w-full h-60 md:h-full">
-          
-          <img id="defaultImg" src="images/image-product-1.jpg" alt="" class="w-full h-full md:rounded-3xl">
+        <div class="main-img w-full h-60 md:h-full flex ">
+          <img id="defaultImg" src="images/image-product-1.jpg" alt="" class="w-screen md:w-full h-full md:rounded-3xl">
+          <img id="defaultImg1" src="images/image-product-1.jpg" alt="" class="w-screen md:w-full h-full md:rounded-3xl">
+          <img id="defaultImg2" src="images/image-product-2.jpg" alt="" class="w-screen md:w-full h-full md:rounded-3xl">
+          <img id="defaultImg3" src="images/image-product-3.jpg" alt="" class="w-screen md:w-full h-full md:rounded-3xl">
+          <img id="defaultImg4" src="images/image-product-4.jpg" alt="" class="w-screen md:w-full h-full md:rounded-3xl">
         </div>
 
         <div class="sub-img w-full hidden md:flex">
-          <button class="thumbnailBtn w-full h-full relative">
+          <button id="button1" onclick="switchDefaultImg('defaultImg1')" class="thumbnailBtn w-full h-14 relative">
             <!-- <input type="checkbox" class="absolute w-full h-full inset-0"> -->
             <div class="img-cover w-full h-full absolute z-10 invisible"></div>
             <img src="images/image-product-1-thumbnail.jpg" alt="">
           </button>
-          <button class="w-full h-full relative">
+          <button id="button2" onclick="switchDefaultImg('defaultImg2')" class="thumbnailBtn w-full h-full relative">
             <div class="img-cover w-full h-full absolute z-10 invisible"></div>
             <img src="images/image-product-2-thumbnail.jpg" alt="" class="w-full">
           </button>
-          <button class="w-full h-full relative">
+          <button id="button3" onclick="switchDefaultImg('defaultImg3')" class="thumbnailBtn w-full h-full relative">
             <div class="img-cover w-full h-full absolute z-10 invisible"></div>
             <img src="images/image-product-3-thumbnail.jpg" alt="" class="w-full">
           </button>
-          <button class="w-full h-full relative">
+          <button id="button4" onclick="switchDefaultImg4('defaultImg4')" class="thumbnailBtn w-full h-full relative">
             <div class="img-cover w-full h-full absolute z-10 invisible"></div>
             <img src="images/image-product-4-thumbnail.jpg" alt="" class="w-full">
           </button>
@@ -207,7 +210,7 @@
 
   </main>
 
-  <div class="attribution mt-8">
+  <div class="attribution mt-14">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">SURU EMMANUEL</a>.
   </div>

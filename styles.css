@@ -117,10 +117,6 @@ header .profile .profile-pic img:hover{
         background: none;
         color: var(--Dark-grayish-blue);
     }
-    /* header nav ul li{
-        height: 100%;
-        border-bottom: 2px solid var(--Orange);
-    } */
     header .badge{
         background-color: var(--Orange);
         padding: 2px 12px;
@@ -157,36 +153,61 @@ main .hero .left #previous:hover i,
 main .hero .left #next:hover i{
     color: var(--Orange);
 }
+
+main .hero .left .main-img img{
+    position: absolute;
+    width: clamp(100%, 350px, 400px);
+}
+main .hero .left .main-img #defaultImg{
+    visibility: visible;
+    position: absolute;
+    width: clamp(100%, 350px, 400px);
+    z-index: 19;
+}
+/* main .hero .left .main-img #defaultImg{
+    visibility: visible;
+    position: absolute;
+    width: clamp(100%, 350px, 400px);
+    z-index: 19;
+} */
 main .hero .left .sub-img{
     gap: 4%;
+    width: clamp(100%, 350px, 400px);
+    height: clamp(300px, 350px, 400px);
+}
+main .hero .left .sub-img button{
+    width: 22%;
+    height: 110px;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: translateY(360px);
+    background-color: rgba(42, 39, 39, 0.742);
+
+}
+
+main .hero .left .sub-img button img{
+    height: 100%;
+    position: absolute;
+    inset: 0;
 }
 main .hero .left .sub-img .img-cover{
     background-color: rgba(255, 255, 255, 0.742);
     border: 2px solid var(--Orange);
     border-radius: 10px;
+    height: 100%;
+    position: absolute;
+    inset: 0;
 }
-main .hero .left .sub-img button{
-    width: 22%;
-    border-radius: 10px;
-    cursor: pointer;
-}
+
 main .hero .left .sub-img button:hover .img-cover{
     visibility: visible;
+    
 }
 main .hero .left .sub-img button img{
     border-radius: 10px;
 }
-/* main .hero .left .sub-img button input{
-    border-radius: 10px;
-    opacity: 0;
-    z-index: 11;
-}
-main .hero .left .sub-img button input:checked .img-cover{
-    border: 2px solid var(--Orange);
-} */
 main .hero .lightbox{
     z-index: 21;
-    /* max-width: 40rem; */
     width: clamp(35rem, 40rem, 45rem);
 }
 main .hero .lightbox #close-lightbox i{
@@ -205,9 +226,11 @@ main .hero .lightbox .sub-img .img-cover{
     background-color: rgba(255, 255, 255, 0.742);
     border: 2px solid var(--Orange);
     border-radius: 32px;
+
 }
 main .hero .lightbox .sub-img img{
     width: 100%;
+
     border-radius: 32px;
 }
 

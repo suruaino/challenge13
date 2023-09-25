@@ -2,6 +2,7 @@ const button = document.getElementById('cartBtn');
 const body = document.body;
 // let cartFill = "";
 let cartFill = document.getElementById("cartfill");
+// console.log(typeof(cartFill));
 let cartEmpty = document.getElementById("cartempty");
 let badge = document.getElementById('badge')
 let thumbnailBtn = document.getElementsByClassName("thumbnailBtn");
@@ -38,7 +39,7 @@ button.addEventListener('click', function (event) {
   event.stopPropagation();
 });
 
-let biggerImg = document.getElementById("defaultImg");
+let biggerImg1 = document.getElementById("defaultImg");
 let lightBx = document.getElementById("lightbx");
 let bodyOverlay = document.getElementById("bodyoverlay");
 function clickBiggerImg(){
@@ -47,13 +48,13 @@ function clickBiggerImg(){
 }
 // Function to handle clicks outside the button
 function handleOutsideImgClick(event) {
-    if (event.target !== biggerImg) {
+    if (event.target !== biggerImg1) {
         lightBx.style.visibility = "hidden";
         bodyOverlay.style.visibility = "hidden";
         
     }
   }
-biggerImg.addEventListener("click", clickBiggerImg);
+biggerImg1.addEventListener("click", clickBiggerImg);
 body.addEventListener('click', handleOutsideImgClick);
 button.addEventListener('click', function (event) {
   event.stopPropagation();
@@ -67,3 +68,23 @@ function thumbnailCheck(){
 }
 
 thumbnailBtn.addEventListener("click", thumbnailCheck);
+
+
+//Switching the thumbnail images
+let buton1 = document.getElementById("button1");
+let buton2 = document.getElementById("button2");
+let buton3 = document.getElementById("button3");
+let buton4 = document.getElementById("button4");
+
+let defaultImg1 = document.getElementById("defaultImg1");
+let defaultImg2 = document.getElementById("defaultImg2");
+let defaultImg3 = document.getElementById("defaultImg3");
+let defaultImg4 = document.getElementById("defaultImg4");
+
+function switchDefaultImg(imageId) {
+  const defaultImgs = document.querySelectorAll('.main-img img');
+
+  defaultImgs.forEach((img) => {
+    img.style.visibility = img.id === imageId ? 'visible' : 'hidden';
+  });
+}
