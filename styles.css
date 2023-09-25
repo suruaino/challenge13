@@ -187,6 +187,7 @@ main .hero .left .sub-img button{
 
 main .hero .left .sub-img button img{
     height: 100%;
+    width: 100%;
     position: absolute;
     inset: 0;
 }
